@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#D81B60</color>
+
+    <color name="colorDemoApp">#0000CD</color>
+
+    <color name="colorSport">#7FFF00</color>
+    <color name="colorEntertainment">#AFEEEE</color>
+    <color name="colorFood">#FFA07A</color>
+    <color name="colorTravel">#EE82EE</color>
+    <color name="colorTotal">#483D8B</color>
+
+    <color name="colorDashboard">#B0C4DE</color>
+
+</resources>

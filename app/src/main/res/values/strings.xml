@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">AdPOC</string>
+    <string name="count_of_ads">Number of Ads watched : </string>
+    <string name="points">Points :</string>
+    <string name="count_of_videos">Number of videos watched : </string>
+    <string name="total_points">Total Points : </string>
+    <string name="summary">SUMMARY</string>
+    <string name="sports">SPORTS</string>
+    <string name="entertainment">ENTERTAINMENT</string>
+    <string name="food">FOOD</string>
+    <string name="travel">TRAVEL</string>
+    <string name="note_weightage_for_1_ad_5_points">Note : Weightage for 1 Ad = 5 Points</string>
+    <string name="first_name">First Name</string>
+    <string name="last_name">Last Name</string>
+    <string name="email">Email</string>
+    <string name="contact_no">Contact No</string>
+    <string name="select_ad_preference">Select Ad Preference</string>
+    <string name="save_profile">SAVE PROFILE</string>
+    <string name="profile">PROFILE</string>
+    <string name="view_video">VIEW VIDEO</string>
+    <string name="dashboard">DASHBOARD</string>
+</resources>
