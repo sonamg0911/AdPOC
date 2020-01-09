@@ -55,7 +55,7 @@ public class ProfileActivity extends AppCompatActivity implements AdapterView.On
         categories = new ArrayList<String>();
         categories.add("Not Selected");
         categories.add("Sports");
-        categories.add("Entertainment ");
+        categories.add("Entertainment");
         categories.add("Food");
         categories.add("Travel");
 

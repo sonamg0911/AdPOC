@@ -25,6 +25,7 @@ class VideoActivity : AppCompatActivity() {
     private var pref: SharedPreferences? = null
     private var editor: SharedPreferences.Editor? = null
     private var player: SimpleExoPlayer? = null
+    private var isVideoComplete: Boolean = false
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -130,14 +131,13 @@ class VideoActivity : AppCompatActivity() {
                     Player.STATE_READY -> {
                     }
                     Player.STATE_ENDED->{
-                        if(playWhenReady){
-                            player?.playWhenReady = false
-                            player?.seekTo(0)
-                            when(pref?.getString(Constants.SELECTED_AD_PREFERENCE,"")){
-                                Constants.SPORT -> editor?.putInt(Constants.SPORT_VIDEO_COUNT,(pref!!.getInt(Constants.SPORT_VIDEO_COUNT,0)+1))
-                                Constants.FOOD -> editor?.putInt(Constants.FOOD_VIDEO_COUNT,(pref!!.getInt(Constants.FOOD_VIDEO_COUNT,0)+1))
-                                Constants.TRAVEL -> editor?.putInt(Constants.TRAVEL_VIDEO_COUNT,(pref!!.getInt(Constants.TRAVEL_VIDEO_COUNT,0)+1))
-                                Constants.ENTERTAINMENT -> editor?.putInt(Constants.ENTERTAINMENT_VIDEO_COUNT,(pref!!.getInt(Constants.ENTERTAINMENT_VIDEO_COUNT,0)+1))
+                        if(!isVideoComplete) {
+                            isVideoComplete = true
+                            when (pref?.getString(Constants.SELECTED_AD_PREFERENCE, "")) {
+                                Constants.SPORT -> editor?.putInt(Constants.SPORT_VIDEO_COUNT, (pref!!.getInt(Constants.SPORT_VIDEO_COUNT, 0) + 1))
+                                Constants.FOOD -> editor?.putInt(Constants.FOOD_VIDEO_COUNT, (pref!!.getInt(Constants.FOOD_VIDEO_COUNT, 0) + 1))
+                                Constants.TRAVEL -> editor?.putInt(Constants.TRAVEL_VIDEO_COUNT, (pref!!.getInt(Constants.TRAVEL_VIDEO_COUNT, 0) + 1))
+                                Constants.ENTERTAINMENT -> editor?.putInt(Constants.ENTERTAINMENT_VIDEO_COUNT, (pref!!.getInt(Constants.ENTERTAINMENT_VIDEO_COUNT, 0) + 1))
                             }
                             editor?.apply()
                         }
